@@ -1,3 +1,8 @@
+gretty {
+    servletContainer = 'jetty9'
+    integrationTestTask = 'test'
+}
+
 test {
     include '**/*Test*'
 
