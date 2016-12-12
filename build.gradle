@@ -13,3 +13,8 @@ task wrapper(type: Wrapper) {
     gradleVersion = '3.2'
 }
 
+task execute(type: JavaExec) {
+    main = 'com.aggor.spider.Bootstrap'
+    classpath = sourceSets.main.runtimeClasspath
+    systemProperties System.getProperties()
+}
