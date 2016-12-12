@@ -1,0 +1,13 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+
+apply from: 'repositories.gradle'
+apply from: 'dependencies.gradle'
+apply from: 'test.gradle'
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.2'
+}
+
