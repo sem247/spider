@@ -32,3 +32,16 @@ Please set <project-to-project> and <http-port> per your environment
  2. Subsequently, do
  
     $ docker start nginx-container
+    
+    
+What I would do differently given more time
+===========================================
+
+ - I don't like the fact that Crawler#findChildren is private on Crawler thus only tested indirectly.
+As this method holds the core of the logic, I would have loved for it to have better testing coverage around it.
+
+- The application runs as a web application in test mode in order to make use of the gretty plugin's capability of starting Jetty before tests and shutting it down after the tests.
+
+- The crawler cannot quite process more than one URL at a time.
+
+- See assumptions above for other areas for improvement.
